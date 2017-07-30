@@ -15,7 +15,6 @@ func _process(delta):
 	else:
 		set_process(false)
 		emit_signal("timer_ended")
-		print("timer end")
 
 func _on_battery_charged():
 	set_process(false)

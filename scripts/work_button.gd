@@ -3,7 +3,6 @@ extends Button
 onready var label = get_node("label")
 
 func _ready():
-	print(label)
 	set_process(true)
 
 func _process(delta):
@@ -51,7 +50,6 @@ func _on_button_day_button_up():
 
 func _on_button_relax_pressed():
 	get_tree().change_scene("res://relax.tscn")
-
 
 func _on_button_bag_pressed():
 	get_tree().change_scene("res://reward.tscn")

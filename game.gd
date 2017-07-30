@@ -11,7 +11,6 @@ func _on_battery_charged():
 	state_player.coins_earned += coins_to_earn
 	state_player.levels_done[level_id] = true
 	get_node("animation").play("popup_win")
-	print(state_player.levels_done)
 
 func _on_timer_ended():
 	get_node("animation").play("popup_lose")

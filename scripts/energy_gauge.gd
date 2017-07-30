@@ -13,7 +13,6 @@ func _ready():
 func _process(delta):
 	if energy >= max_energy:
 		get_node("../../sound_player").play("battery_charged")
-		print("Battery charged!")
 		emit_signal("battery_charged")
 		set_process(false)
 	update()
