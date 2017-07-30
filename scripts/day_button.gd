@@ -42,3 +42,18 @@ func _on_button_day4_pressed():
 
 func _on_button_day5_pressed():
 	get_tree().change_scene("res://levels/level_5.tscn")
+
+func _on_6_pressed():
+	get_tree().change_scene("res://levels/level_6.tscn")
+
+
+func _on_7_pressed():
+	get_tree().change_scene("res://levels/level_7.tscn")
+
+
+func _on_8_pressed():
+	get_tree().change_scene("res://levels/level_8.tscn")
+
+
+func _on_9_pressed():
+	get_tree().change_scene("res://levels/level_9.tscn")

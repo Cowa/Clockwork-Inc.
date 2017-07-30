@@ -352,7 +352,7 @@ tracks/1/keys = {
 [node name="game" type="Node2D"]
 
 script/script = ExtResource( 1 )
-coins_to_earn = 1
+coins_to_earn = 4
 level_id = 2
 
 [node name="gui" type="Sprite" parent="."]

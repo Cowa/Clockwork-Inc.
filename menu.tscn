@@ -362,6 +362,8 @@ script/script = ExtResource( 12 )
 
 [connection signal="pressed" from="button_relax" to="button_relax" method="_on_button_relax_pressed"]
 
+[connection signal="pressed" from="button_bag" to="button_work" method="_on_button_bag_pressed"]
+
 [connection signal="pressed" from="button_exit" to="button_exit" method="_on_button_exit_pressed"]
 
 

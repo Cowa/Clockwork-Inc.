@@ -2,14 +2,14 @@
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://assets/game_gui.png" type="Texture" id=2]
-[ext_resource path="res://assets/connector_unpowered.png" type="Texture" id=3]
-[ext_resource path="res://scripts/connector.gd" type="Script" id=4]
-[ext_resource path="res://assets/turner-dock.png" type="Texture" id=5]
-[ext_resource path="res://assets/turner-handle.png" type="Texture" id=6]
-[ext_resource path="res://scripts/handle.gd" type="Script" id=7]
-[ext_resource path="res://assets/button_unpressed.png" type="Texture" id=8]
-[ext_resource path="res://assets/button_pressed.png" type="Texture" id=9]
-[ext_resource path="res://scripts/button.gd" type="Script" id=10]
+[ext_resource path="res://assets/button_unpressed.png" type="Texture" id=3]
+[ext_resource path="res://assets/button_pressed.png" type="Texture" id=4]
+[ext_resource path="res://scripts/button.gd" type="Script" id=5]
+[ext_resource path="res://assets/connector_unpowered.png" type="Texture" id=6]
+[ext_resource path="res://scripts/connector.gd" type="Script" id=7]
+[ext_resource path="res://assets/turner-dock.png" type="Texture" id=8]
+[ext_resource path="res://assets/turner-handle.png" type="Texture" id=9]
+[ext_resource path="res://scripts/handle.gd" type="Script" id=10]
 [ext_resource path="res://assets/battery_back.png" type="Texture" id=11]
 [ext_resource path="res://scripts/energy_gauge.gd" type="Script" id=12]
 [ext_resource path="res://assets/battery_around.png" type="Texture" id=13]
@@ -34,10 +34,22 @@
 [ext_resource path="res://scripts/replay_button.gd" type="Script" id=32]
 [ext_resource path="res://assets/failure_popup_end.png" type="Texture" id=33]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="StyleBoxTexture" id=1]
 
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 3 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=2]
 
@@ -45,7 +57,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 8 )
+texture = ExtResource( 4 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -62,7 +74,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 9 )
+texture = ExtResource( 3 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -73,24 +85,12 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="RectangleShape2D" id=18]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 8 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
+custom_solver_bias = 0.0
+extents = Vector2( 13.1617, 11.2234 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -103,7 +103,7 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -116,7 +116,7 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[sub_resource type="SampleLibrary" id=7]
+[sub_resource type="SampleLibrary" id=6]
 
 samples/battery_charged = {
 "db": 0.0,
@@ -143,7 +143,7 @@ samples/power_up = {
 "sample": ExtResource( 18 )
 }
 
-[sub_resource type="StyleBoxTexture" id=8]
+[sub_resource type="StyleBoxTexture" id=7]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -160,7 +160,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=9]
+[sub_resource type="StyleBoxTexture" id=8]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -177,7 +177,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=10]
+[sub_resource type="StyleBoxTexture" id=9]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -194,7 +194,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=11]
+[sub_resource type="StyleBoxTexture" id=10]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -211,7 +211,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=12]
+[sub_resource type="StyleBoxTexture" id=11]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -228,7 +228,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=13]
+[sub_resource type="StyleBoxTexture" id=12]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -245,7 +245,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=14]
+[sub_resource type="StyleBoxTexture" id=13]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -262,7 +262,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=15]
+[sub_resource type="StyleBoxTexture" id=14]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -279,7 +279,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=16]
+[sub_resource type="StyleBoxTexture" id=15]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -296,7 +296,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=16]
 
 resource/name = "popup_lose"
 length = 0.5
@@ -323,8 +323,9 @@ tracks/1/keys = {
 "values": [ Vector2( -371.298, 436.526 ), Vector2( 280, 436.526 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=17]
 
+resource/name = "popup_win"
 length = 0.5
 loop = false
 step = 0.1
@@ -352,8 +353,8 @@ tracks/1/keys = {
 [node name="game" type="Node2D"]
 
 script/script = ExtResource( 1 )
-coins_to_earn = 5
-level_id = 3
+coins_to_earn = 20
+level_id = 9
 
 [node name="gui" type="Sprite" parent="."]
 
@@ -362,177 +363,462 @@ transform/scale = Vector2( 1.01392, 1 )
 texture = ExtResource( 2 )
 centered = false
 
-[node name="turner" type="Position2D" parent="."]
+[node name="button4 2" type="Button" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 260.835, 23.9176 )
-
-[node name="connector" type="Sprite" parent="turner"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( -78.4291, 375.98 )
-transform/rot = 180.0
-texture = ExtResource( 3 )
-script/script = ExtResource( 4 )
-state = 0
-
-[node name="dock" type="Sprite" parent="turner"]
-
-transform/pos = Vector2( -80.3701, 314.304 )
-texture = ExtResource( 5 )
-
-[node name="handle" type="Sprite" parent="turner"]
-
-editor/display_folded = true
-transform/pos = Vector2( -77.743, 310.39 )
-texture = ExtResource( 6 )
-offset = Vector2( 3, -30 )
-script/script = ExtResource( 7 )
-max_power = 33
-power_generated_by_step = 5
-
-[node name="Area2D" type="Area2D" parent="turner/handle"]
-
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.65976, 0, 0, 1.51039, 1.19656, -54.4991 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="turner/handle/Area2D"]
-
-transform/pos = Vector2( 1.19656, -54.4991 )
-transform/scale = Vector2( 1.65976, 1.51039 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-
-[node name="turner1" type="Position2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( 410.062, 23.9176 )
-
-[node name="connector" type="Sprite" parent="turner1"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( -78.4291, 375.98 )
-transform/rot = 180.0
-texture = ExtResource( 3 )
-script/script = ExtResource( 4 )
-state = 0
-
-[node name="dock" type="Sprite" parent="turner1"]
-
-transform/pos = Vector2( -80.3701, 314.304 )
-texture = ExtResource( 5 )
-
-[node name="handle" type="Sprite" parent="turner1"]
-
-editor/display_folded = true
-transform/pos = Vector2( -77.743, 310.39 )
-texture = ExtResource( 6 )
-offset = Vector2( 3, -30 )
-script/script = ExtResource( 7 )
-max_power = 33
-power_generated_by_step = 5
-
-[node name="Area2D" type="Area2D" parent="turner1/handle"]
-
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.65976, 0, 0, 1.51039, 1.19656, -54.4991 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="turner1/handle/Area2D"]
-
-transform/pos = Vector2( 1.19656, -54.4991 )
-transform/scale = Vector2( 1.65976, 1.51039 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-
-[node name="turner2" type="Position2D" parent="."]
-
-transform/pos = Vector2( 556.275, 19.3955 )
-
-[node name="connector" type="Sprite" parent="turner2"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( -78.4291, 375.98 )
-transform/rot = 180.0
-texture = ExtResource( 3 )
-script/script = ExtResource( 4 )
-state = 0
-
-[node name="dock" type="Sprite" parent="turner2"]
-
-transform/pos = Vector2( -80.3701, 314.304 )
-texture = ExtResource( 5 )
-
-[node name="handle" type="Sprite" parent="turner2"]
-
-transform/pos = Vector2( -77.743, 310.39 )
-texture = ExtResource( 6 )
-offset = Vector2( 3, -30 )
-script/script = ExtResource( 7 )
-max_power = 20
-power_generated_by_step = 5
-
-[node name="Area2D" type="Area2D" parent="turner2/handle"]
-
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.65976, 0, 0, 1.51039, 1.19656, -54.4991 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="turner2/handle/Area2D"]
-
-transform/pos = Vector2( 1.19656, -54.4991 )
-transform/scale = Vector2( 1.65976, 1.51039 )
-shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
-
-[node name="button1" type="Button" parent="."]
-
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 289.0
-margin/top = 585.0
-margin/right = 378.0
-margin/bottom = 674.0
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
+margin/left = 441.0
+margin/top = 523.0
+margin/right = 530.0
+margin/bottom = 612.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 flat = false
-script/script = ExtResource( 10 )
-max_clicked = 12
-power_generated_by_step = 2
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
 
-[node name="connector" type="Sprite" parent="button1"]
+[node name="connector" type="Sprite" parent="button4 2"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( -43.9986, 44.5298 )
-transform/rot = 90.0
-texture = ExtResource( 3 )
-script/script = ExtResource( 4 )
+transform/pos = Vector2( 44.3151, -11.7726 )
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
 state = 0
+
+[node name="button45 2" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 441.0
+margin/top = 129.0
+margin/right = 530.0
+margin/bottom = 218.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button45 2"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 44.3151, -11.7726 )
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button44 2" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 438.0
+margin/top = 635.0
+margin/right = 527.0
+margin/bottom = 724.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button44 2"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 43.8224, 101.278 )
+transform/rot = 180.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button443" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 438.0
+margin/top = 241.0
+margin/right = 527.0
+margin/bottom = 330.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button443"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 43.8224, 101.278 )
+transform/rot = 180.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button43" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 144.0
+margin/top = 527.0
+margin/right = 233.0
+margin/bottom = 616.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button43"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 44.4365, -14.3534 )
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button45" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 144.0
+margin/top = 133.0
+margin/right = 233.0
+margin/bottom = 222.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button45"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 44.4365, -14.3534 )
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button44" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 141.0
+margin/top = 639.0
+margin/right = 230.0
+margin/bottom = 728.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button44"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 43.9438, 98.6972 )
+transform/rot = 180.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button45 3" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 141.0
+margin/top = 245.0
+margin/right = 230.0
+margin/bottom = 334.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button45 3"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 43.9438, 98.6972 )
+transform/rot = 180.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button4" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 299.0
+margin/top = 525.0
+margin/right = 388.0
+margin/bottom = 614.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button4"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 44.5168, -12.8076 )
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button6 2" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 299.0
+margin/top = 131.0
+margin/right = 388.0
+margin/bottom = 220.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button6 2"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 44.5168, -12.8076 )
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button5" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 296.0
+margin/top = 637.0
+margin/right = 385.0
+margin/bottom = 726.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button5"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 44.0242, 100.243 )
+transform/rot = 180.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button6" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 296.0
+margin/top = 243.0
+margin/right = 385.0
+margin/bottom = 332.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 7
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button6"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 44.0242, 100.243 )
+transform/rot = 180.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="turner4" type="Position2D" parent="."]
+
+transform/pos = Vector2( 549.934, 414.633 )
+
+[node name="connector" type="Sprite" parent="turner4"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -31.1742, 10.3754 )
+transform/rot = 90.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="dock" type="Sprite" parent="turner4"]
+
+transform/pos = Vector2( 2.63008, 7.30331 )
+texture = ExtResource( 8 )
+
+[node name="handle" type="Sprite" parent="turner4"]
+
+transform/pos = Vector2( 5.25719, 3.38934 )
+texture = ExtResource( 9 )
+offset = Vector2( 3, -30 )
+script/script = ExtResource( 10 )
+max_power = 14
+power_generated_by_step = 2
+
+[node name="Area2D" type="Area2D" parent="turner4/handle"]
+
+transform/pos = Vector2( 6, 0 )
+input/pickable = true
+shapes/0/shape = SubResource( 18 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -1.4548, -54.2427 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="turner4/handle/Area2D"]
+
+transform/pos = Vector2( -1.4548, -54.2427 )
+shape = SubResource( 18 )
+trigger = false
+_update_shape_index = 0
+
+[node name="turner3" type="Position2D" parent="."]
+
+transform/pos = Vector2( 114.871, 418.677 )
+
+[node name="connector" type="Sprite" parent="turner3"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 38.7916, 8.87943 )
+transform/rot = -90.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="dock" type="Sprite" parent="turner3"]
+
+transform/pos = Vector2( 2.63008, 7.30331 )
+texture = ExtResource( 8 )
+
+[node name="handle" type="Sprite" parent="turner3"]
+
+transform/pos = Vector2( 5.25719, 3.38934 )
+texture = ExtResource( 9 )
+offset = Vector2( 3, -30 )
+script/script = ExtResource( 10 )
+max_power = 14
+power_generated_by_step = 2
+
+[node name="Area2D" type="Area2D" parent="turner3/handle"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 18 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2.5452, -54.2427 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="turner3/handle/Area2D"]
+
+transform/pos = Vector2( 2.5452, -54.2427 )
+shape = SubResource( 18 )
+trigger = false
+_update_shape_index = 0
 
 [node name="battery" type="Node2D" parent="."]
 
@@ -562,8 +848,8 @@ margin/left = 210.0
 margin/top = 11.0
 margin/right = 435.0
 margin/bottom = 42.0
-custom_styles/fg = SubResource( 5 )
-custom_styles/bg = SubResource( 6 )
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
@@ -584,7 +870,7 @@ params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
 config/polyphony = 1
-config/samples = SubResource( 7 )
+config/samples = SubResource( 6 )
 config/pitch_random = 0.0
 
 [node name="close_button" type="Button" parent="."]
@@ -597,9 +883,9 @@ margin/left = 535.0
 margin/top = 11.0
 margin/right = 630.0
 margin/bottom = 108.0
-custom_styles/hover = SubResource( 8 )
-custom_styles/pressed = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -696,9 +982,9 @@ margin/left = 55.0
 margin/top = 106.0
 margin/right = 129.0
 margin/bottom = 177.0
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/normal = SubResource( 13 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -715,9 +1001,9 @@ margin/left = -340.0
 margin/top = 106.0
 margin/right = -266.0
 margin/bottom = 177.0
-custom_styles/hover = SubResource( 14 )
-custom_styles/pressed = SubResource( 15 )
-custom_styles/normal = SubResource( 16 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -812,9 +1098,9 @@ margin/left = 267.0
 margin/top = 105.0
 margin/right = 341.0
 margin/bottom = 176.0
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/normal = SubResource( 13 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -831,9 +1117,9 @@ margin/left = -132.0
 margin/top = 106.0
 margin/right = -58.0
 margin/bottom = 177.0
-custom_styles/hover = SubResource( 14 )
-custom_styles/pressed = SubResource( 15 )
-custom_styles/normal = SubResource( 16 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
@@ -845,14 +1131,36 @@ script/script = ExtResource( 32 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/popup_lose = SubResource( 17 )
-anims/popup_win = SubResource( 18 )
+anims/popup_lose = SubResource( 16 )
+anims/popup_win = SubResource( 17 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[connection signal="pressed" from="button1" to="button1" method="_on_button_pressed"]
+[connection signal="pressed" from="button4 2" to="button4 2" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button45 2" to="button45 2" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button44 2" to="button44 2" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button443" to="button443" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button43" to="button43" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button45" to="button45" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button44" to="button44" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button45 3" to="button45 3" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button4" to="button4" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button6 2" to="button6 2" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button5" to="button5" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button6" to="button6" method="_on_button_pressed"]
 
 [connection signal="pressed" from="close_button" to="close_button" method="_on_close_button_pressed_ingame"]
 

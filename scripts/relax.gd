@@ -48,7 +48,6 @@ func _on_ball_input_event(viewport, event, shape):
 			ball_pulled.nb_clicked = 0
 			in_use = false
 			
-			print("heeere")
 			get_node("point/clickable/badge").hide()
 			get_node("point/clickable/ball").show()
 			get_node("point").set_pos(point_init_pos)

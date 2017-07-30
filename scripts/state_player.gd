@@ -1,7 +1,7 @@
 extends Node
 
 var coins_earned = 0
-var current_coins = 500
+var current_coins = 0
 
 var levels_done = {
 	1: false,
@@ -23,7 +23,5 @@ var items = {
 	5: false,
 	6: false,
 	7: false,
-	8: false,
-	9: false,
-	10: false
+	8: false
 }

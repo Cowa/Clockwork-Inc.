@@ -2,14 +2,14 @@
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://assets/game_gui.png" type="Texture" id=2]
-[ext_resource path="res://assets/connector_unpowered.png" type="Texture" id=3]
-[ext_resource path="res://scripts/connector.gd" type="Script" id=4]
-[ext_resource path="res://assets/turner-dock.png" type="Texture" id=5]
-[ext_resource path="res://assets/turner-handle.png" type="Texture" id=6]
-[ext_resource path="res://scripts/handle.gd" type="Script" id=7]
-[ext_resource path="res://assets/button_unpressed.png" type="Texture" id=8]
-[ext_resource path="res://assets/button_pressed.png" type="Texture" id=9]
-[ext_resource path="res://scripts/button.gd" type="Script" id=10]
+[ext_resource path="res://assets/button_unpressed.png" type="Texture" id=3]
+[ext_resource path="res://assets/button_pressed.png" type="Texture" id=4]
+[ext_resource path="res://scripts/button.gd" type="Script" id=5]
+[ext_resource path="res://assets/connector_unpowered.png" type="Texture" id=6]
+[ext_resource path="res://scripts/connector.gd" type="Script" id=7]
+[ext_resource path="res://assets/turner-dock.png" type="Texture" id=8]
+[ext_resource path="res://assets/turner-handle.png" type="Texture" id=9]
+[ext_resource path="res://scripts/handle.gd" type="Script" id=10]
 [ext_resource path="res://assets/battery_back.png" type="Texture" id=11]
 [ext_resource path="res://scripts/energy_gauge.gd" type="Script" id=12]
 [ext_resource path="res://assets/battery_around.png" type="Texture" id=13]
@@ -34,10 +34,22 @@
 [ext_resource path="res://scripts/replay_button.gd" type="Script" id=32]
 [ext_resource path="res://assets/failure_popup_end.png" type="Texture" id=33]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="StyleBoxTexture" id=1]
 
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 3 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=2]
 
@@ -45,7 +57,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 8 )
+texture = ExtResource( 4 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -62,7 +74,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 9 )
+texture = ExtResource( 3 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -73,22 +85,10 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="RectangleShape2D" id=4]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 8 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
+custom_solver_bias = 0.0
+extents = Vector2( 13.1617, 11.2234 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 
@@ -298,7 +298,6 @@ draw_center = true
 
 [sub_resource type="Animation" id=17]
 
-resource/name = "popup_lose"
 length = 0.5
 loop = false
 step = 0.1
@@ -352,8 +351,8 @@ tracks/1/keys = {
 [node name="game" type="Node2D"]
 
 script/script = ExtResource( 1 )
-coins_to_earn = 5
-level_id = 3
+coins_to_earn = 7
+level_id = 6
 
 [node name="gui" type="Sprite" parent="."]
 
@@ -362,40 +361,101 @@ transform/scale = Vector2( 1.01392, 1 )
 texture = ExtResource( 2 )
 centered = false
 
+[node name="button0" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 256.0
+margin/top = 318.0
+margin/right = 345.0
+margin/bottom = 407.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 1
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button0"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 135.375, 41.5151 )
+transform/rot = -90.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button1" type="Button" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 357.0
+margin/top = 421.0
+margin/right = 446.0
+margin/bottom = 510.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 1
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button1"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -43.9986, 44.5298 )
+transform/rot = 90.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
 [node name="turner" type="Position2D" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 260.835, 23.9176 )
+transform/pos = Vector2( 185.757, 358.512 )
 
 [node name="connector" type="Sprite" parent="turner"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( -78.4291, 375.98 )
-transform/rot = 180.0
-texture = ExtResource( 3 )
-script/script = ExtResource( 4 )
+transform/pos = Vector2( -54.1246, 4.93399 )
+transform/rot = 90.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
 state = 0
 
 [node name="dock" type="Sprite" parent="turner"]
 
-transform/pos = Vector2( -80.3701, 314.304 )
-texture = ExtResource( 5 )
+transform/pos = Vector2( 2.63008, 7.30331 )
+texture = ExtResource( 8 )
 
 [node name="handle" type="Sprite" parent="turner"]
 
-editor/display_folded = true
-transform/pos = Vector2( -77.743, 310.39 )
-texture = ExtResource( 6 )
+transform/pos = Vector2( 5.25719, 3.38934 )
+texture = ExtResource( 9 )
 offset = Vector2( 3, -30 )
-script/script = ExtResource( 7 )
-max_power = 33
+script/script = ExtResource( 10 )
+max_power = 30
 power_generated_by_step = 5
 
 [node name="Area2D" type="Area2D" parent="turner/handle"]
 
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.65976, 0, 0, 1.51039, 1.19656, -54.4991 )
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2.5452, -54.2427 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -404,46 +464,44 @@ angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="turner/handle/Area2D"]
 
-transform/pos = Vector2( 1.19656, -54.4991 )
-transform/scale = Vector2( 1.65976, 1.51039 )
-shape = SubResource( 1 )
+transform/pos = Vector2( 2.5452, -54.2427 )
+shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
 
 [node name="turner1" type="Position2D" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 410.062, 23.9176 )
+transform/pos = Vector2( 185.757, 466.512 )
 
 [node name="connector" type="Sprite" parent="turner1"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( -78.4291, 375.98 )
-transform/rot = 180.0
-texture = ExtResource( 3 )
-script/script = ExtResource( 4 )
+transform/pos = Vector2( -54.1246, 4.93399 )
+transform/rot = 90.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
 state = 0
 
 [node name="dock" type="Sprite" parent="turner1"]
 
-transform/pos = Vector2( -80.3701, 314.304 )
-texture = ExtResource( 5 )
+transform/pos = Vector2( 2.63008, 7.30331 )
+texture = ExtResource( 8 )
 
 [node name="handle" type="Sprite" parent="turner1"]
 
-editor/display_folded = true
-transform/pos = Vector2( -77.743, 310.39 )
-texture = ExtResource( 6 )
+transform/pos = Vector2( 5.25719, 3.38934 )
+texture = ExtResource( 9 )
 offset = Vector2( 3, -30 )
-script/script = ExtResource( 7 )
-max_power = 33
-power_generated_by_step = 5
+script/script = ExtResource( 10 )
+max_power = 20
+power_generated_by_step = 2
 
 [node name="Area2D" type="Area2D" parent="turner1/handle"]
 
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.65976, 0, 0, 1.51039, 1.19656, -54.4991 )
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2.5452, -54.2427 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -452,44 +510,44 @@ angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="turner1/handle/Area2D"]
 
-transform/pos = Vector2( 1.19656, -54.4991 )
-transform/scale = Vector2( 1.65976, 1.51039 )
-shape = SubResource( 1 )
+transform/pos = Vector2( 2.5452, -54.2427 )
+shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
 
 [node name="turner2" type="Position2D" parent="."]
 
-transform/pos = Vector2( 556.275, 19.3955 )
+editor/display_folded = true
+transform/pos = Vector2( 493.756, 456.512 )
 
 [node name="connector" type="Sprite" parent="turner2"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( -78.4291, 375.98 )
-transform/rot = 180.0
-texture = ExtResource( 3 )
-script/script = ExtResource( 4 )
+transform/pos = Vector2( 58.8756, 6.93399 )
+transform/rot = -90.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
 state = 0
 
 [node name="dock" type="Sprite" parent="turner2"]
 
-transform/pos = Vector2( -80.3701, 314.304 )
-texture = ExtResource( 5 )
+transform/pos = Vector2( 2.63008, 7.30331 )
+texture = ExtResource( 8 )
 
 [node name="handle" type="Sprite" parent="turner2"]
 
-transform/pos = Vector2( -77.743, 310.39 )
-texture = ExtResource( 6 )
+transform/pos = Vector2( 5.25719, 3.38934 )
+texture = ExtResource( 9 )
 offset = Vector2( 3, -30 )
-script/script = ExtResource( 7 )
-max_power = 20
-power_generated_by_step = 5
+script/script = ExtResource( 10 )
+max_power = 50
+power_generated_by_step = 2
 
 [node name="Area2D" type="Area2D" parent="turner2/handle"]
 
 input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.65976, 0, 0, 1.51039, 1.19656, -54.4991 )
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2.5452, -54.2427 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -498,41 +556,56 @@ angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="turner2/handle/Area2D"]
 
-transform/pos = Vector2( 1.19656, -54.4991 )
-transform/scale = Vector2( 1.65976, 1.51039 )
-shape = SubResource( 1 )
+transform/pos = Vector2( 2.5452, -54.2427 )
+shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
 
-[node name="button1" type="Button" parent="."]
+[node name="turner3" type="Position2D" parent="."]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 289.0
-margin/top = 585.0
-margin/right = 378.0
-margin/bottom = 674.0
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-flat = false
-script/script = ExtResource( 10 )
-max_clicked = 12
-power_generated_by_step = 2
+editor/display_folded = true
+transform/pos = Vector2( 493.756, 347.512 )
 
-[node name="connector" type="Sprite" parent="button1"]
+[node name="connector" type="Sprite" parent="turner3"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( -43.9986, 44.5298 )
-transform/rot = 90.0
-texture = ExtResource( 3 )
-script/script = ExtResource( 4 )
+transform/pos = Vector2( 58.8756, 6.93399 )
+transform/rot = -90.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
 state = 0
+
+[node name="dock" type="Sprite" parent="turner3"]
+
+transform/pos = Vector2( 2.63008, 7.30331 )
+texture = ExtResource( 8 )
+
+[node name="handle" type="Sprite" parent="turner3"]
+
+transform/pos = Vector2( 5.25719, 3.38934 )
+texture = ExtResource( 9 )
+offset = Vector2( 3, -30 )
+script/script = ExtResource( 10 )
+max_power = 10
+power_generated_by_step = 2
+
+[node name="Area2D" type="Area2D" parent="turner3/handle"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2.5452, -54.2427 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="turner3/handle/Area2D"]
+
+transform/pos = Vector2( 2.5452, -54.2427 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
 
 [node name="battery" type="Node2D" parent="."]
 
@@ -573,7 +646,7 @@ range/exp_edit = false
 range/rounded = false
 percent/visible = false
 script/script = ExtResource( 14 )
-speed = 4
+speed = 3
 
 [node name="sound_player" type="SamplePlayer2D" parent="."]
 
@@ -726,6 +799,8 @@ script/script = ExtResource( 32 )
 
 [node name="pop_up_end_failure" type="Node2D" parent="."]
 
+editor/display_folded = true
+
 [node name="black_shade" type="Node2D" parent="pop_up_end_failure"]
 
 visibility/opacity = 0.0
@@ -851,6 +926,8 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+
+[connection signal="pressed" from="button0" to="button0" method="_on_button_pressed"]
 
 [connection signal="pressed" from="button1" to="button1" method="_on_button_pressed"]
 

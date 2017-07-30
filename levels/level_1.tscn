@@ -4,7 +4,7 @@
 
 [node name="game" instance=ExtResource( 1 )]
 
-coins_to_earn = 1
+coins_to_earn = 3
 level_id = 1
 
 [node name="button0" parent="."]
