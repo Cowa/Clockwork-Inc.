@@ -1,66 +1,17 @@
-[gd_scene load_steps=23 format=1]
+[gd_scene load_steps=25 format=1]
 
 [ext_resource path="res://assets/menu.png" type="Texture" id=1]
 [ext_resource path="res://assets/fonts/title.fnt" type="BitmapFont" id=2]
 [ext_resource path="res://assets/menu_button_work_unpressed.png" type="Texture" id=3]
 [ext_resource path="res://assets/menu_button_work_pressed.png" type="Texture" id=4]
-[ext_resource path="res://assets/menu_button_relax_unpressed.png" type="Texture" id=5]
-[ext_resource path="res://assets/menu_button_relax_pressed.png" type="Texture" id=6]
-[ext_resource path="res://assets/menu_bag_unpressed.png" type="Texture" id=7]
-[ext_resource path="res://assets/menu_bag_pressed.png" type="Texture" id=8]
-[ext_resource path="res://assets/menu_quit_unpressed.png" type="Texture" id=9]
-[ext_resource path="res://assets/menu_quit_pressed.png" type="Texture" id=10]
-
-[sub_resource type="StyleBoxTexture" id=4]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 3 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
-
-[sub_resource type="StyleBoxTexture" id=5]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 4 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
-
-[sub_resource type="StyleBoxTexture" id=6]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 3 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
+[ext_resource path="res://scripts/work_button.gd" type="Script" id=5]
+[ext_resource path="res://assets/menu_button_relax_unpressed.png" type="Texture" id=6]
+[ext_resource path="res://assets/menu_button_relax_pressed.png" type="Texture" id=7]
+[ext_resource path="res://assets/menu_bag_unpressed.png" type="Texture" id=8]
+[ext_resource path="res://assets/menu_bag_pressed.png" type="Texture" id=9]
+[ext_resource path="res://assets/menu_quit_unpressed.png" type="Texture" id=10]
+[ext_resource path="res://assets/menu_quit_pressed.png" type="Texture" id=11]
+[ext_resource path="res://scripts/exit_button.gd" type="Script" id=12]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -68,24 +19,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 5 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
-
-[sub_resource type="StyleBoxTexture" id=3]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 6 )
+texture = ExtResource( 3 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -102,7 +36,75 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 3 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 6 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=5]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 7 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=6]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 6 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -119,7 +121,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -136,7 +138,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -153,7 +155,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -170,7 +172,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -187,7 +189,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -204,7 +206,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -246,18 +248,19 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 162.0
-margin/top = 197.0
+margin/top = 206.0
 margin/right = 482.0
-margin/bottom = 322.0
-custom_styles/hover = SubResource( 4 )
-custom_styles/pressed = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+margin/bottom = 331.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 flat = false
+script/script = ExtResource( 5 )
 
-[node name="work" type="Label" parent="button_work"]
+[node name="label" type="Label" parent="button_work"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -281,18 +284,19 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 162.0
-margin/top = 382.0
+margin/top = 391.0
 margin/right = 482.0
-margin/bottom = 507.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 2 )
+margin/bottom = 516.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 flat = false
+script/script = ExtResource( 5 )
 
-[node name="relax" type="Label" parent="button_relax"]
+[node name="label" type="Label" parent="button_relax"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -327,7 +331,7 @@ enabled_focus_mode = 0
 shortcut = null
 flat = false
 
-[node name="Button" type="Button" parent="."]
+[node name="button_exit" type="Button" parent="."]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -344,5 +348,18 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 flat = false
+script/script = ExtResource( 12 )
+
+[connection signal="button_down" from="button_work" to="button_work" method="_on_button_work_button_down"]
+
+[connection signal="button_up" from="button_work" to="button_work" method="_on_button_work_button_up"]
+
+[connection signal="pressed" from="button_work" to="button_work" method="_on_button_work_pressed"]
+
+[connection signal="button_down" from="button_relax" to="button_relax" method="_on_button_relax_button_down"]
+
+[connection signal="button_up" from="button_relax" to="button_relax" method="_on_button_relax_button_up"]
+
+[connection signal="pressed" from="button_exit" to="button_exit" method="_on_button_exit_pressed"]
 
 

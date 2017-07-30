@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://assets/menu_button_work_unpressed.png" type="Texture" id=1]
+[ext_resource path="res://assets/menu_button_work_pressed.png" type="Texture" id=2]
+[ext_resource path="res://scripts/work_button.gd" type="Script" id=3]
+[ext_resource path="res://assets/fonts/title.fnt" type="BitmapFont" id=4]
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 1 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=5]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 2 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=6]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 1 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[node name="button_work" type="Button"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 162.0
+margin/top = 197.0
+margin/right = 482.0
+margin/bottom = 322.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+script/script = ExtResource( 3 )
+
+[node name="label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 68.0
+margin/top = 23.0
+margin/right = 237.0
+margin/bottom = 88.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.172549, 0.164706, 0.196078, 1 )
+text = "Work"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="button_down" from="." to="." method="_on_button_work_button_down"]
+
+[connection signal="button_up" from="." to="." method="_on_button_work_button_up"]
+
+[connection signal="pressed" from="." to="." method="_on_button_work_pressed"]
+
+

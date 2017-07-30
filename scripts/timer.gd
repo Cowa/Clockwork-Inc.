@@ -10,3 +10,6 @@ func _process(delta):
 	else:
 		set_process(false)
 		print("timer end")
+
+func _on_battery_charged():
+	set_process(false)

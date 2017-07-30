@@ -35,7 +35,7 @@ func _input(event):
 				rotate(angle)
 				
 				if previous_rotation <= 0 and get_global_rotd() >= 0:
-					if power > max_power:
+					if power >= max_power:
 						get_node("../../sound_player").play("input_powered")
 						emit_signal("max_power_generated_reached")
 					else:

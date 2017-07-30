@@ -1,39 +1,35 @@
-[gd_scene load_steps=23 format=1]
+[gd_scene load_steps=45 format=1]
 
-[ext_resource path="res://assets/game_gui.png" type="Texture" id=1]
-[ext_resource path="res://assets/button_unpressed.png" type="Texture" id=2]
-[ext_resource path="res://assets/button_pressed.png" type="Texture" id=3]
-[ext_resource path="res://scripts/button.gd" type="Script" id=4]
-[ext_resource path="res://assets/connector_unpowered.png" type="Texture" id=5]
-[ext_resource path="res://scripts/connector.gd" type="Script" id=6]
-[ext_resource path="res://assets/turner-dock.png" type="Texture" id=7]
-[ext_resource path="res://assets/turner-handle.png" type="Texture" id=8]
-[ext_resource path="res://scripts/handle.gd" type="Script" id=9]
-[ext_resource path="res://assets/battery_back.png" type="Texture" id=10]
-[ext_resource path="res://scripts/energy_gauge.gd" type="Script" id=11]
-[ext_resource path="res://assets/battery_around.png" type="Texture" id=12]
-[ext_resource path="res://scripts/timer.gd" type="Script" id=13]
-[ext_resource path="res://assets/audio/input_powered.wav" type="Sample" id=14]
-[ext_resource path="res://assets/audio/power_up.wav" type="Sample" id=15]
+[ext_resource path="res://game.gd" type="Script" id=1]
+[ext_resource path="res://assets/game_gui.png" type="Texture" id=2]
+[ext_resource path="res://assets/button_unpressed.png" type="Texture" id=3]
+[ext_resource path="res://assets/button_pressed.png" type="Texture" id=4]
+[ext_resource path="res://scripts/button.gd" type="Script" id=5]
+[ext_resource path="res://assets/connector_unpowered.png" type="Texture" id=6]
+[ext_resource path="res://scripts/connector.gd" type="Script" id=7]
+[ext_resource path="res://assets/battery_back.png" type="Texture" id=8]
+[ext_resource path="res://scripts/energy_gauge.gd" type="Script" id=9]
+[ext_resource path="res://assets/battery_around.png" type="Texture" id=10]
+[ext_resource path="res://scripts/timer.gd" type="Script" id=11]
+[ext_resource path="res://assets/audio/battery_charged.wav" type="Sample" id=12]
+[ext_resource path="res://assets/audio/input_powered.wav" type="Sample" id=13]
+[ext_resource path="res://assets/audio/power_up.wav" type="Sample" id=14]
+[ext_resource path="res://assets/close_button_unpressed.png" type="Texture" id=15]
+[ext_resource path="res://assets/close_button_pressed.png" type="Texture" id=16]
+[ext_resource path="res://scripts/close_button.gd" type="Script" id=17]
+[ext_resource path="res://scripts/black_shade.gd" type="Script" id=18]
+[ext_resource path="res://assets/success_popup_end.png" type="Texture" id=19]
+[ext_resource path="res://scripts/popup_pay.gd" type="Script" id=20]
+[ext_resource path="res://assets/fonts/title.fnt" type="BitmapFont" id=21]
+[ext_resource path="res://assets/coin.png" type="Texture" id=22]
+[ext_resource path="res://assets/page_button_next_unpressed.png" type="Texture" id=23]
+[ext_resource path="res://assets/page_button_next_pressed.png" type="Texture" id=24]
+[ext_resource path="res://scripts/button_popup_game_end_to_levels.gd" type="Script" id=25]
+[ext_resource path="res://assets/replay_unpressed.png" type="Texture" id=26]
+[ext_resource path="res://assets/replay_pressed.png" type="Texture" id=27]
+[ext_resource path="res://scripts/replay_button.gd" type="Script" id=28]
 
-[sub_resource type="StyleBoxTexture" id=6]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 2 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
-
-[sub_resource type="StyleBoxTexture" id=7]
+[sub_resource type="StyleBoxTexture" id=1]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -50,13 +46,13 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=8]
+[sub_resource type="StyleBoxTexture" id=2]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -67,10 +63,22 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="StyleBoxTexture" id=3]
 
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 3 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
 [sub_resource type="StyleBoxFlat" id=5]
 
@@ -85,7 +93,7 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=6]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -98,26 +106,217 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[sub_resource type="SampleLibrary" id=11]
+[sub_resource type="SampleLibrary" id=7]
 
+samples/battery_charged = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 12 )
+}
 samples/input_powered = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 14 )
+"sample": ExtResource( 13 )
 }
 samples/power_up = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 15 )
+"sample": ExtResource( 14 )
+}
+
+[sub_resource type="StyleBoxTexture" id=8]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 15 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=9]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 16 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=10]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 15 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=11]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 23 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=12]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 24 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=13]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 23 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=14]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 26 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=15]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 27 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=16]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 26 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="Animation" id=17]
+
+resource/name = "popup_win"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("pop_up_end/black_shade:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("pop_up_end/check_hand:transform/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 458.106 ), Vector2( 382.443, 458.106 ) ]
 }
 
 [node name="game" type="Node2D"]
 
+script/script = ExtResource( 1 )
+coins_to_earn = 2
+
 [node name="gui" type="Sprite" parent="."]
 
-texture = ExtResource( 1 )
+transform/pos = Vector2( -5.29456, -8 )
+transform/scale = Vector2( 1.01392, 1 )
+texture = ExtResource( 2 )
 centered = false
 
 [node name="button0" type="Button" parent="."]
@@ -127,49 +326,48 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 285.0
-margin/top = 212.0
-margin/right = 374.0
-margin/bottom = 301.0
-custom_styles/hover = SubResource( 6 )
-custom_styles/pressed = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
+margin/left = 311.0
+margin/top = 232.0
+margin/right = 400.0
+margin/bottom = 321.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 flat = false
-script/script = ExtResource( 4 )
-max_clicked = 10
-power_generated_by_step = 2
+script/script = ExtResource( 5 )
+max_clicked = 25
+power_generated_by_step = 50
 
 [node name="connector" type="Sprite" parent="button0"]
 
 visibility/behind_parent = true
 transform/pos = Vector2( 135.375, 41.5151 )
 transform/rot = -90.0
-texture = ExtResource( 5 )
-script/script = ExtResource( 6 )
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
 
 [node name="button1" type="Button" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 408.0
-margin/top = 554.0
-margin/right = 497.0
-margin/bottom = 643.0
-custom_styles/hover = SubResource( 6 )
-custom_styles/pressed = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
+margin/left = 313.0
+margin/top = 507.0
+margin/right = 402.0
+margin/bottom = 596.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 flat = false
-script/script = ExtResource( 4 )
-max_clicked = 10
+script/script = ExtResource( 5 )
+max_clicked = 31
 power_generated_by_step = 2
 
 [node name="connector" type="Sprite" parent="button1"]
@@ -177,86 +375,38 @@ power_generated_by_step = 2
 visibility/behind_parent = true
 transform/pos = Vector2( -43.9986, 44.5298 )
 transform/rot = 90.0
-texture = ExtResource( 5 )
-script/script = ExtResource( 6 )
-
-[node name="turner" type="Node2D" parent="."]
-
-transform/pos = Vector2( 239, 167 )
-
-[node name="dock" type="Sprite" parent="turner"]
-
-transform/pos = Vector2( -80.3701, 314.304 )
-texture = ExtResource( 7 )
-
-[node name="handle" type="Sprite" parent="turner"]
-
-editor/display_folded = true
-transform/pos = Vector2( -77.743, 310.39 )
-texture = ExtResource( 8 )
-offset = Vector2( 3, -30 )
-script/script = ExtResource( 9 )
-max_power = 60
-power_generated_by_step = 10
-
-[node name="Area2D" type="Area2D" parent="turner/handle"]
-
-editor/display_folded = true
-input/pickable = true
-shapes/0/shape = SubResource( 9 )
-shapes/0/transform = Matrix32( 1.65976, 0, 0, 1.51039, 1.19656, -54.4991 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="turner/handle/Area2D"]
-
-transform/pos = Vector2( 1.19656, -54.4991 )
-transform/scale = Vector2( 1.65976, 1.51039 )
-shape = SubResource( 9 )
-trigger = false
-_update_shape_index = 0
-
-[node name="connector" type="Sprite" parent="turner"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( -78.4291, 375.98 )
-transform/rot = -180.0
-texture = ExtResource( 5 )
-script/script = ExtResource( 6 )
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
 
 [node name="battery" type="Node2D" parent="."]
 
-transform/pos = Vector2( 70.2049, 169.184 )
+transform/pos = Vector2( 69.7614, 100.096 )
 
 [node name="sprite_back" type="Sprite" parent="battery"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 8 )
 
 [node name="battery_gauge" type="Position2D" parent="battery"]
 
 transform/pos = Vector2( -20.2925, 28.8024 )
-script/script = ExtResource( 11 )
+script/script = ExtResource( 9 )
 
 [node name="sprite_around" type="Sprite" parent="battery"]
 
-texture = ExtResource( 12 )
+texture = ExtResource( 10 )
 
 [node name="timer" type="ProgressBar" parent="."]
 
-rect/rotation = 90.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 599.0
-margin/top = 281.0
-margin/right = 760.0
-margin/bottom = 317.0
+margin/left = 210.0
+margin/top = 11.0
+margin/right = 435.0
+margin/bottom = 42.0
 custom_styles/fg = SubResource( 5 )
-custom_styles/bg = SubResource( 10 )
+custom_styles/bg = SubResource( 6 )
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
@@ -265,22 +415,174 @@ range/value = 100.0
 range/exp_edit = false
 range/rounded = false
 percent/visible = false
-script/script = ExtResource( 13 )
+script/script = ExtResource( 11 )
 
 [node name="sound_player" type="SamplePlayer2D" parent="."]
 
-transform/pos = Vector2( 71.9098, 168.889 )
+transform/pos = Vector2( 69.4663, 99.8009 )
 params/volume_db = 0.0
 params/pitch_scale = 1.0
 params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
 config/polyphony = 1
-config/samples = SubResource( 11 )
+config/samples = SubResource( 7 )
 config/pitch_random = 0.0
+
+[node name="close_button" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 535.0
+margin/top = 11.0
+margin/right = 630.0
+margin/bottom = 108.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 17 )
+
+[node name="pop_up_end" type="Node2D" parent="."]
+
+[node name="black_shade" type="Node2D" parent="pop_up_end"]
+
+visibility/opacity = 0.16
+script/script = ExtResource( 18 )
+
+[node name="check_hand" type="Sprite" parent="pop_up_end"]
+
+transform/pos = Vector2( 1036.49, 458.106 )
+texture = ExtResource( 19 )
+script/script = ExtResource( 20 )
+
+[node name="title" type="CenterContainer" parent="pop_up_end/check_hand"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -354.0
+margin/top = -207.0
+margin/right = 147.0
+margin/bottom = -122.0
+use_top_left = false
+
+[node name="pay" type="Label" parent="pop_up_end/check_hand/title"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 193.0
+margin/top = 10.0
+margin/right = 308.0
+margin/bottom = 75.0
+custom_fonts/font = ExtResource( 21 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Pay"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="text" type="CenterContainer" parent="pop_up_end/check_hand"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -355.0
+margin/top = -66.0
+margin/right = 147.0
+margin/bottom = 65.0
+use_top_left = false
+
+[node name="pay" type="Label" parent="pop_up_end/check_hand/text"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 221.0
+margin/top = 33.0
+margin/right = 280.0
+margin/bottom = 98.0
+custom_fonts/font = ExtResource( 21 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "x1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="coin" type="Sprite" parent="pop_up_end/check_hand/text/pay"]
+
+transform/pos = Vector2( -45.1627, 36.1621 )
+texture = ExtResource( 22 )
+
+[node name="go_to_select_level" type="Button" parent="pop_up_end/check_hand"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 55.0
+margin/top = 106.0
+margin/right = 129.0
+margin/bottom = 177.0
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+script/script = ExtResource( 25 )
+
+[node name="replay" type="Button" parent="pop_up_end/check_hand"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -340.0
+margin/top = 106.0
+margin/right = -266.0
+margin/bottom = 177.0
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 28 )
+
+[node name="animation" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/popup_win = SubResource( 17 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
 
 [connection signal="pressed" from="button0" to="button0" method="_on_button_pressed"]
 
 [connection signal="pressed" from="button1" to="button1" method="_on_button_pressed"]
+
+[connection signal="pressed" from="close_button" to="close_button" method="_on_close_button_pressed_ingame"]
+
+[connection signal="pressed" from="pop_up_end/check_hand/go_to_select_level" to="pop_up_end/check_hand/go_to_select_level" method="_on_go_to_select_level_pressed"]
+
+[connection signal="pressed" from="pop_up_end/check_hand/replay" to="pop_up_end/check_hand/replay" method="_on_replay_pressed"]
 
 
