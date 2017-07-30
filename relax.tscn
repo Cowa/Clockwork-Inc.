@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=1]
+[gd_scene load_steps=32 format=1]
 
 [ext_resource path="res://scripts/relax.gd" type="Script" id=1]
 [ext_resource path="res://assets/distributor.png" type="Texture" id=2]
@@ -20,7 +20,8 @@
 [ext_resource path="res://assets/audio/ball_touched_ground.wav" type="Sample" id=18]
 [ext_resource path="res://assets/audio/coins_inserted.wav" type="Sample" id=19]
 [ext_resource path="res://assets/audio/not_enough_coins.wav" type="Sample" id=20]
-[ext_resource path="res://assets/audio/rolling_balls.wav" type="Sample" id=21]
+[ext_resource path="res://assets/audio/picked_badge.wav" type="Sample" id=21]
+[ext_resource path="res://assets/audio/rolling_balls.wav" type="Sample" id=22]
 
 [sub_resource type="RectangleShape2D" id=8]
 
@@ -161,11 +162,17 @@ samples/not_enough_coins = {
 "priority": 0,
 "sample": ExtResource( 20 )
 }
-samples/rolling_balls = {
+samples/picked_badge = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 21 )
+}
+samples/rolling_balls = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 22 )
 }
 
 [sub_resource type="Animation" id=9]
@@ -196,7 +203,6 @@ texture = ExtResource( 2 )
 
 [node name="point" type="Position2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 417, 427 )
 
 [node name="clickable" type="Area2D" parent="point"]
@@ -221,6 +227,11 @@ transform/scale = Vector2( 3.79969, 3.33912 )
 shape = SubResource( 8 )
 trigger = false
 _update_shape_index = 0
+
+[node name="badge" type="Sprite" parent="point/clickable"]
+
+visibility/visible = false
+transform/pos = Vector2( 0, -14 )
 
 [node name="pipe" type="Sprite" parent="."]
 
