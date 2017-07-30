@@ -117,9 +117,8 @@ samples/power_up = {
 
 [node name="gui" type="Sprite" parent="."]
 
-transform/pos = Vector2( 249.113, 145.061 )
-transform/scale = Vector2( 0.697399, 0.787632 )
 texture = ExtResource( 1 )
+centered = false
 
 [node name="button0" type="Button" parent="."]
 
@@ -128,10 +127,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 165.0
-margin/top = 192.0
-margin/right = 254.0
-margin/bottom = 281.0
+margin/left = 285.0
+margin/top = 212.0
+margin/right = 374.0
+margin/bottom = 301.0
 custom_styles/hover = SubResource( 6 )
 custom_styles/pressed = SubResource( 7 )
 custom_styles/normal = SubResource( 8 )
@@ -141,6 +140,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 max_clicked = 10
+power_generated_by_step = 2
 
 [node name="connector" type="Sprite" parent="button0"]
 
@@ -157,10 +157,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 290.0
-margin/top = 596.0
-margin/right = 379.0
-margin/bottom = 685.0
+margin/left = 408.0
+margin/top = 554.0
+margin/right = 497.0
+margin/bottom = 643.0
 custom_styles/hover = SubResource( 6 )
 custom_styles/pressed = SubResource( 7 )
 custom_styles/normal = SubResource( 8 )
@@ -170,6 +170,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 max_clicked = 10
+power_generated_by_step = 2
 
 [node name="connector" type="Sprite" parent="button1"]
 
@@ -185,13 +186,13 @@ transform/pos = Vector2( 239, 167 )
 
 [node name="dock" type="Sprite" parent="turner"]
 
-transform/pos = Vector2( -123.341, 252.917 )
+transform/pos = Vector2( -80.3701, 314.304 )
 texture = ExtResource( 7 )
 
 [node name="handle" type="Sprite" parent="turner"]
 
 editor/display_folded = true
-transform/pos = Vector2( -120.714, 249.003 )
+transform/pos = Vector2( -77.743, 310.39 )
 texture = ExtResource( 8 )
 offset = Vector2( 3, -30 )
 script/script = ExtResource( 9 )
@@ -221,14 +222,14 @@ _update_shape_index = 0
 [node name="connector" type="Sprite" parent="turner"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( -121.4, 314.593 )
+transform/pos = Vector2( -78.4291, 375.98 )
 transform/rot = -180.0
 texture = ExtResource( 5 )
 script/script = ExtResource( 6 )
 
 [node name="battery" type="Node2D" parent="."]
 
-transform/pos = Vector2( 61.0574, 137.719 )
+transform/pos = Vector2( 70.2049, 169.184 )
 
 [node name="sprite_back" type="Sprite" parent="battery"]
 
@@ -250,10 +251,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 461.0
-margin/top = 251.0
-margin/right = 617.0
-margin/bottom = 278.0
+margin/left = 599.0
+margin/top = 281.0
+margin/right = 760.0
+margin/bottom = 317.0
 custom_styles/fg = SubResource( 5 )
 custom_styles/bg = SubResource( 10 )
 range/min = 0.0
@@ -268,7 +269,7 @@ script/script = ExtResource( 13 )
 
 [node name="sound_player" type="SamplePlayer2D" parent="."]
 
-transform/pos = Vector2( 54.7622, 145.424 )
+transform/pos = Vector2( 71.9098, 168.889 )
 params/volume_db = 0.0
 params/pitch_scale = 1.0
 params/attenuation/min_distance = 1.0
