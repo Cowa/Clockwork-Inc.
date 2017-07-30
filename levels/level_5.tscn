@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=1]
+[gd_scene load_steps=48 format=1]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://assets/game_gui.png" type="Texture" id=2]
@@ -7,32 +7,29 @@
 [ext_resource path="res://scripts/button.gd" type="Script" id=5]
 [ext_resource path="res://assets/connector_unpowered.png" type="Texture" id=6]
 [ext_resource path="res://scripts/connector.gd" type="Script" id=7]
-[ext_resource path="res://assets/turner-dock.png" type="Texture" id=8]
-[ext_resource path="res://assets/turner-handle.png" type="Texture" id=9]
-[ext_resource path="res://scripts/handle.gd" type="Script" id=10]
-[ext_resource path="res://assets/battery_back.png" type="Texture" id=11]
-[ext_resource path="res://scripts/energy_gauge.gd" type="Script" id=12]
-[ext_resource path="res://assets/battery_around.png" type="Texture" id=13]
-[ext_resource path="res://scripts/timer.gd" type="Script" id=14]
-[ext_resource path="res://assets/audio/battery_charged.wav" type="Sample" id=15]
-[ext_resource path="res://assets/audio/input_powered.wav" type="Sample" id=16]
-[ext_resource path="res://assets/audio/power_down.wav" type="Sample" id=17]
-[ext_resource path="res://assets/audio/power_up.wav" type="Sample" id=18]
-[ext_resource path="res://assets/close_button_unpressed.png" type="Texture" id=19]
-[ext_resource path="res://assets/close_button_pressed.png" type="Texture" id=20]
-[ext_resource path="res://scripts/close_button.gd" type="Script" id=21]
-[ext_resource path="res://scripts/black_shade.gd" type="Script" id=22]
-[ext_resource path="res://assets/success_popup_end.png" type="Texture" id=23]
-[ext_resource path="res://scripts/popup_pay.gd" type="Script" id=24]
-[ext_resource path="res://assets/fonts/title.fnt" type="BitmapFont" id=25]
-[ext_resource path="res://assets/coin.png" type="Texture" id=26]
-[ext_resource path="res://assets/page_button_next_unpressed.png" type="Texture" id=27]
-[ext_resource path="res://assets/page_button_next_pressed.png" type="Texture" id=28]
-[ext_resource path="res://scripts/button_popup_game_end_to_levels.gd" type="Script" id=29]
-[ext_resource path="res://assets/replay_unpressed.png" type="Texture" id=30]
-[ext_resource path="res://assets/replay_pressed.png" type="Texture" id=31]
-[ext_resource path="res://scripts/replay_button.gd" type="Script" id=32]
-[ext_resource path="res://assets/failure_popup_end.png" type="Texture" id=33]
+[ext_resource path="res://assets/battery_back.png" type="Texture" id=8]
+[ext_resource path="res://scripts/energy_gauge.gd" type="Script" id=9]
+[ext_resource path="res://assets/battery_around.png" type="Texture" id=10]
+[ext_resource path="res://scripts/timer.gd" type="Script" id=11]
+[ext_resource path="res://assets/audio/battery_charged.wav" type="Sample" id=12]
+[ext_resource path="res://assets/audio/input_powered.wav" type="Sample" id=13]
+[ext_resource path="res://assets/audio/power_down.wav" type="Sample" id=14]
+[ext_resource path="res://assets/audio/power_up.wav" type="Sample" id=15]
+[ext_resource path="res://assets/close_button_unpressed.png" type="Texture" id=16]
+[ext_resource path="res://assets/close_button_pressed.png" type="Texture" id=17]
+[ext_resource path="res://scripts/close_button.gd" type="Script" id=18]
+[ext_resource path="res://scripts/black_shade.gd" type="Script" id=19]
+[ext_resource path="res://assets/success_popup_end.png" type="Texture" id=20]
+[ext_resource path="res://scripts/popup_pay.gd" type="Script" id=21]
+[ext_resource path="res://assets/fonts/title.fnt" type="BitmapFont" id=22]
+[ext_resource path="res://assets/coin.png" type="Texture" id=23]
+[ext_resource path="res://assets/page_button_next_unpressed.png" type="Texture" id=24]
+[ext_resource path="res://assets/page_button_next_pressed.png" type="Texture" id=25]
+[ext_resource path="res://scripts/button_popup_game_end_to_levels.gd" type="Script" id=26]
+[ext_resource path="res://assets/replay_unpressed.png" type="Texture" id=27]
+[ext_resource path="res://assets/replay_pressed.png" type="Texture" id=28]
+[ext_resource path="res://scripts/replay_button.gd" type="Script" id=29]
+[ext_resource path="res://assets/failure_popup_end.png" type="Texture" id=30]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -85,12 +82,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -103,7 +95,7 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -116,32 +108,49 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[sub_resource type="SampleLibrary" id=7]
+[sub_resource type="SampleLibrary" id=6]
 
 samples/battery_charged = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 15 )
+"sample": ExtResource( 12 )
 }
 samples/input_powered = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 16 )
+"sample": ExtResource( 13 )
 }
 samples/power_down = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 17 )
+"sample": ExtResource( 14 )
 }
 samples/power_up = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 18 )
+"sample": ExtResource( 15 )
 }
+
+[sub_resource type="StyleBoxTexture" id=7]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 16 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=8]
 
@@ -149,7 +158,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 19 )
+texture = ExtResource( 17 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -166,7 +175,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 20 )
+texture = ExtResource( 16 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -183,7 +192,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 19 )
+texture = ExtResource( 24 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -200,7 +209,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 27 )
+texture = ExtResource( 25 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -217,7 +226,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 28 )
+texture = ExtResource( 24 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -251,7 +260,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 30 )
+texture = ExtResource( 28 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -268,7 +277,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-texture = ExtResource( 31 )
+texture = ExtResource( 27 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -279,24 +288,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=16]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 30 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
-
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=16]
 
 resource/name = "popup_lose"
 length = 0.5
@@ -323,8 +315,9 @@ tracks/1/keys = {
 "values": [ Vector2( -371.298, 436.526 ), Vector2( 280, 436.526 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=17]
 
+resource/name = "popup_win"
 length = 0.5
 loop = false
 step = 0.1
@@ -352,8 +345,8 @@ tracks/1/keys = {
 [node name="game" type="Node2D"]
 
 script/script = ExtResource( 1 )
-coins_to_earn = 1
-level_id = 2
+coins_to_earn = 3
+level_id = 5
 
 [node name="gui" type="Sprite" parent="."]
 
@@ -369,10 +362,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 368.0
-margin/top = 245.0
-margin/right = 457.0
-margin/bottom = 334.0
+margin/left = 367.0
+margin/top = 274.0
+margin/right = 456.0
+margin/bottom = 363.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
@@ -381,8 +374,8 @@ enabled_focus_mode = 0
 shortcut = null
 flat = false
 script/script = ExtResource( 5 )
-max_clicked = 13
-power_generated_by_step = 2
+max_clicked = 28
+power_generated_by_step = 1
 
 [node name="connector" type="Sprite" parent="button0"]
 
@@ -395,14 +388,15 @@ state = 0
 
 [node name="button1" type="Button" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 209.0
-margin/top = 432.0
-margin/right = 298.0
-margin/bottom = 521.0
+margin/left = 206.0
+margin/top = 276.0
+margin/right = 295.0
+margin/bottom = 365.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
@@ -411,8 +405,8 @@ enabled_focus_mode = 0
 shortcut = null
 flat = false
 script/script = ExtResource( 5 )
-max_clicked = 13
-power_generated_by_step = 2
+max_clicked = 28
+power_generated_by_step = 1
 
 [node name="connector" type="Sprite" parent="button1"]
 
@@ -423,69 +417,145 @@ texture = ExtResource( 6 )
 script/script = ExtResource( 7 )
 state = 0
 
-[node name="turner" type="Position2D" parent="."]
+[node name="button2" type="Button" parent="."]
 
-transform/pos = Vector2( 489.6, 279.841 )
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 134.0
+margin/top = 481.0
+margin/right = 223.0
+margin/bottom = 570.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 14
+power_generated_by_step = 1
 
-[node name="dock" type="Sprite" parent="turner"]
-
-transform/pos = Vector2( -80.3701, 314.304 )
-texture = ExtResource( 8 )
-
-[node name="connector" type="Sprite" parent="turner"]
+[node name="connector" type="Sprite" parent="button2"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( -78.4291, 375.98 )
-transform/rot = -180.0
+transform/pos = Vector2( -24.8863, -6.19144 )
+transform/rot = 55.0
 texture = ExtResource( 6 )
 script/script = ExtResource( 7 )
 state = 0
 
-[node name="handle" type="Sprite" parent="turner"]
+[node name="button3" type="Button" parent="."]
 
-transform/pos = Vector2( -77.743, 310.39 )
-texture = ExtResource( 9 )
-offset = Vector2( 3, -30 )
-script/script = ExtResource( 10 )
-max_power = 60
-power_generated_by_step = 10
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 236.0
+margin/top = 524.0
+margin/right = 325.0
+margin/bottom = 613.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 14
+power_generated_by_step = 1
 
-[node name="Area2D" type="Area2D" parent="turner/handle"]
+[node name="connector" type="Sprite" parent="button3"]
 
-input/pickable = true
-shapes/0/shape = SubResource( 4 )
-shapes/0/transform = Matrix32( 1.65976, 0, 0, 1.51039, 1.19656, -54.4991 )
-shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
+visibility/behind_parent = true
+transform/pos = Vector2( -7.20145, 99.9175 )
+transform/rot = 135.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="turner/handle/Area2D"]
+[node name="button4" type="Button" parent="."]
 
-transform/pos = Vector2( 1.19656, -54.4991 )
-transform/scale = Vector2( 1.65976, 1.51039 )
-shape = SubResource( 4 )
-trigger = false
-_update_shape_index = 0
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 345.0
+margin/top = 527.0
+margin/right = 434.0
+margin/bottom = 616.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 14
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button4"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 87.4634, 97.9586 )
+transform/rot = -135.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
+
+[node name="button5" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 451.0
+margin/top = 490.0
+margin/right = 540.0
+margin/bottom = 579.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+script/script = ExtResource( 5 )
+max_clicked = 14
+power_generated_by_step = 1
+
+[node name="connector" type="Sprite" parent="button5"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 95.4658, -5.27255 )
+transform/rot = -45.0
+texture = ExtResource( 6 )
+script/script = ExtResource( 7 )
+state = 0
 
 [node name="battery" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 69.7614, 100.096 )
 
 [node name="sprite_back" type="Sprite" parent="battery"]
 
-texture = ExtResource( 11 )
+texture = ExtResource( 8 )
 
 [node name="battery_gauge" type="Position2D" parent="battery"]
 
 transform/pos = Vector2( -20.2925, 28.8024 )
-script/script = ExtResource( 12 )
+script/script = ExtResource( 9 )
 
 [node name="sprite_around" type="Sprite" parent="battery"]
 
-texture = ExtResource( 13 )
+texture = ExtResource( 10 )
 
 [node name="timer" type="ProgressBar" parent="."]
 
@@ -497,8 +567,8 @@ margin/left = 210.0
 margin/top = 11.0
 margin/right = 435.0
 margin/bottom = 42.0
-custom_styles/fg = SubResource( 5 )
-custom_styles/bg = SubResource( 6 )
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0
@@ -507,8 +577,8 @@ range/value = 100.0
 range/exp_edit = false
 range/rounded = false
 percent/visible = false
-script/script = ExtResource( 14 )
-speed = 4
+script/script = ExtResource( 11 )
+speed = 3
 
 [node name="sound_player" type="SamplePlayer2D" parent="."]
 
@@ -519,7 +589,7 @@ params/attenuation/min_distance = 1.0
 params/attenuation/max_distance = 2048.0
 params/attenuation/distance_exp = 1.0
 config/polyphony = 1
-config/samples = SubResource( 7 )
+config/samples = SubResource( 6 )
 config/pitch_random = 0.0
 
 [node name="close_button" type="Button" parent="."]
@@ -532,14 +602,14 @@ margin/left = 535.0
 margin/top = 11.0
 margin/right = 630.0
 margin/bottom = 108.0
-custom_styles/hover = SubResource( 8 )
-custom_styles/pressed = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 flat = false
-script/script = ExtResource( 21 )
+script/script = ExtResource( 18 )
 
 [node name="pop_up_end" type="Node2D" parent="."]
 
@@ -548,13 +618,13 @@ editor/display_folded = true
 [node name="black_shade" type="Node2D" parent="pop_up_end"]
 
 visibility/opacity = 0.0
-script/script = ExtResource( 22 )
+script/script = ExtResource( 19 )
 
 [node name="check_hand" type="Sprite" parent="pop_up_end"]
 
 transform/pos = Vector2( 1200, 458.106 )
-texture = ExtResource( 23 )
-script/script = ExtResource( 24 )
+texture = ExtResource( 20 )
+script/script = ExtResource( 21 )
 
 [node name="title" type="CenterContainer" parent="pop_up_end/check_hand"]
 
@@ -579,7 +649,7 @@ margin/left = 193.0
 margin/top = 10.0
 margin/right = 308.0
 margin/bottom = 75.0
-custom_fonts/font = ExtResource( 25 )
+custom_fonts/font = ExtResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Pay"
 percent_visible = 1.0
@@ -609,7 +679,7 @@ margin/left = 221.0
 margin/top = 33.0
 margin/right = 280.0
 margin/bottom = 98.0
-custom_fonts/font = ExtResource( 25 )
+custom_fonts/font = ExtResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "x1"
 percent_visible = 1.0
@@ -619,7 +689,7 @@ max_lines_visible = -1
 [node name="coin" type="Sprite" parent="pop_up_end/check_hand/text/pay"]
 
 transform/pos = Vector2( -45.1627, 36.1621 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="go_to_select_level" type="Button" parent="pop_up_end/check_hand"]
 
@@ -631,14 +701,14 @@ margin/left = 55.0
 margin/top = 106.0
 margin/right = 129.0
 margin/bottom = 177.0
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/normal = SubResource( 13 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 flat = false
-script/script = ExtResource( 29 )
+script/script = ExtResource( 26 )
 
 [node name="replay" type="Button" parent="pop_up_end/check_hand"]
 
@@ -650,27 +720,27 @@ margin/left = -340.0
 margin/top = 106.0
 margin/right = -266.0
 margin/bottom = 177.0
-custom_styles/hover = SubResource( 14 )
-custom_styles/pressed = SubResource( 15 )
-custom_styles/normal = SubResource( 16 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 flat = false
-script/script = ExtResource( 32 )
+script/script = ExtResource( 29 )
 
 [node name="pop_up_end_failure" type="Node2D" parent="."]
 
 [node name="black_shade" type="Node2D" parent="pop_up_end_failure"]
 
 visibility/opacity = 0.0
-script/script = ExtResource( 22 )
+script/script = ExtResource( 19 )
 
 [node name="check_hand" type="Sprite" parent="pop_up_end_failure"]
 
 editor/display_folded = true
 transform/pos = Vector2( -371.298, 436.526 )
-texture = ExtResource( 33 )
+texture = ExtResource( 30 )
 flip_h = true
 
 [node name="title" type="CenterContainer" parent="pop_up_end_failure/check_hand"]
@@ -695,7 +765,7 @@ margin/left = 193.0
 margin/top = 10.0
 margin/right = 308.0
 margin/bottom = 75.0
-custom_fonts/font = ExtResource( 25 )
+custom_fonts/font = ExtResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Pay"
 percent_visible = 1.0
@@ -724,7 +794,7 @@ margin/left = 211.0
 margin/top = 33.0
 margin/right = 290.0
 margin/bottom = 98.0
-custom_fonts/font = ExtResource( 25 )
+custom_fonts/font = ExtResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "x0"
 percent_visible = 1.0
@@ -735,7 +805,7 @@ max_lines_visible = -1
 
 visibility/opacity = 0.2
 transform/pos = Vector2( -45.1627, 36.1621 )
-texture = ExtResource( 26 )
+texture = ExtResource( 23 )
 
 [node name="go_to_select_level" type="Button" parent="pop_up_end_failure/check_hand"]
 
@@ -743,18 +813,18 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 267.0
-margin/top = 105.0
-margin/right = 341.0
-margin/bottom = 176.0
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/normal = SubResource( 13 )
+margin/left = 280.0
+margin/top = 101.0
+margin/right = 354.0
+margin/bottom = 172.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 flat = false
-script/script = ExtResource( 29 )
+script/script = ExtResource( 26 )
 
 [node name="replay" type="Button" parent="pop_up_end_failure/check_hand"]
 
@@ -766,22 +836,22 @@ margin/left = -132.0
 margin/top = 106.0
 margin/right = -58.0
 margin/bottom = 177.0
-custom_styles/hover = SubResource( 14 )
-custom_styles/pressed = SubResource( 15 )
-custom_styles/normal = SubResource( 16 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 flat = false
-script/script = ExtResource( 32 )
+script/script = ExtResource( 29 )
 
 [node name="animation" type="AnimationPlayer" parent="."]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/popup_lose = SubResource( 17 )
-anims/popup_win = SubResource( 18 )
+anims/popup_lose = SubResource( 16 )
+anims/popup_win = SubResource( 17 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -790,6 +860,14 @@ autoplay = ""
 [connection signal="pressed" from="button0" to="button0" method="_on_button_pressed"]
 
 [connection signal="pressed" from="button1" to="button1" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button2" to="button2" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button3" to="button3" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button4" to="button4" method="_on_button_pressed"]
+
+[connection signal="pressed" from="button5" to="button5" method="_on_button_pressed"]
 
 [connection signal="pressed" from="close_button" to="close_button" method="_on_close_button_pressed_ingame"]
 

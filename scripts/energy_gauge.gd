@@ -25,3 +25,8 @@ func _draw():
 func _on_power_received(power_received):
 	get_node("../../sound_player").play("power_up")
 	energy += power_received
+
+func _on_power_loose(power_loose):
+	get_node("../../sound_player").play("power_down")
+	energy -= power_loose / 2
+	energy = max(0, energy)

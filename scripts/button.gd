@@ -8,7 +8,7 @@ signal power_given
 signal max_power_generated_reached
 
 func _ready():
-	connect("power_given", get_node("../battery/battery_gauge"), "_on_power_received")
+	connect("power_given", get_node("connector"), "_on_power_received")
 	connect("max_power_generated_reached", get_node("connector"), "_on_max_power_generated_reached")
 	set_process(true)
 
@@ -22,3 +22,7 @@ func _on_button_pressed():
 	else:
 		get_node("../sound_player").play("input_powered")
 		emit_signal("max_power_generated_reached")
+
+func _on_power_loose(power_loose):
+	clicked -= power_loose / 2
+	clicked = max(0, clicked)

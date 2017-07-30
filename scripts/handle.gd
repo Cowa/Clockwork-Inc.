@@ -14,7 +14,7 @@ signal max_power_generated_reached
 func _ready():
 	get_node("Area2D").connect("input_event", self, "_on_area_input_event")
 	set_process_input(true)
-	connect("send_power", get_node("../../battery/battery_gauge"), "_on_power_received")
+	connect("send_power", get_node("../connector"), "_on_power_received")
 	connect("max_power_generated_reached", get_node("../connector"), "_on_max_power_generated_reached")
 
 func _on_area_input_event(viewport, event, shape):
@@ -52,3 +52,7 @@ func is_rotating_clockwise(old, new):
 		return true
 	else:
 		return false
+
+func _on_power_loose(power_loose):
+	power -= power_loose / 2
+	power = max(0, power)

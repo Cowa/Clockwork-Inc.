@@ -61,7 +61,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=7]
+[sub_resource type="StyleBoxTexture" id=4]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -78,7 +78,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=8]
+[sub_resource type="StyleBoxTexture" id=5]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -95,7 +95,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=9]
+[sub_resource type="StyleBoxTexture" id=6]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -119,9 +119,8 @@ draw_center = true
 texture = ExtResource( 1 )
 centered = false
 
-[node name="button_day1" type="Button" parent="."]
+[node name="1" type="Button" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -139,7 +138,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 
-[node name="label" type="VBoxContainer" parent="button_day1"]
+[node name="label" type="VBoxContainer" parent="1"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -151,7 +150,7 @@ margin/right = 125.0
 margin/bottom = 108.0
 alignment = 0
 
-[node name="day" type="CenterContainer" parent="button_day1/label"]
+[node name="day" type="CenterContainer" parent="1/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -163,7 +162,7 @@ margin/right = 125.0
 margin/bottom = 26.0
 use_top_left = false
 
-[node name="label" type="Label" parent="button_day1/label/day"]
+[node name="label" type="Label" parent="1/label/day"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -180,7 +179,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="number" type="CenterContainer" parent="button_day1/label"]
+[node name="number" type="CenterContainer" parent="1/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -192,7 +191,7 @@ margin/right = 125.0
 margin/bottom = 95.0
 use_top_left = false
 
-[node name="label" type="Label" parent="button_day1/label/number"]
+[node name="label" type="Label" parent="1/label/number"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -209,8 +208,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="button_day2" type="Button" parent="."]
+[node name="2" type="Button" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -228,7 +228,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 
-[node name="label" type="VBoxContainer" parent="button_day2"]
+[node name="label" type="VBoxContainer" parent="2"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -240,7 +240,7 @@ margin/right = 121.0
 margin/bottom = 105.0
 alignment = 0
 
-[node name="day" type="CenterContainer" parent="button_day2/label"]
+[node name="day" type="CenterContainer" parent="2/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -252,7 +252,7 @@ margin/right = 121.0
 margin/bottom = 26.0
 use_top_left = false
 
-[node name="Label" type="Label" parent="button_day2/label/day"]
+[node name="Label" type="Label" parent="2/label/day"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -269,7 +269,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="number" type="CenterContainer" parent="button_day2/label"]
+[node name="number" type="CenterContainer" parent="2/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -281,7 +281,7 @@ margin/right = 121.0
 margin/bottom = 95.0
 use_top_left = false
 
-[node name="label" type="Label" parent="button_day2/label/number"]
+[node name="label" type="Label" parent="2/label/number"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -298,8 +298,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="button_day3" type="Button" parent="."]
+[node name="3" type="Button" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -317,7 +318,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 
-[node name="label" type="VBoxContainer" parent="button_day3"]
+[node name="label" type="VBoxContainer" parent="3"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -329,7 +330,7 @@ margin/right = 121.0
 margin/bottom = 105.0
 alignment = 0
 
-[node name="day" type="CenterContainer" parent="button_day3/label"]
+[node name="day" type="CenterContainer" parent="3/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -341,7 +342,7 @@ margin/right = 121.0
 margin/bottom = 26.0
 use_top_left = false
 
-[node name="Label" type="Label" parent="button_day3/label/day"]
+[node name="Label" type="Label" parent="3/label/day"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -358,7 +359,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="number" type="CenterContainer" parent="button_day3/label"]
+[node name="number" type="CenterContainer" parent="3/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -370,7 +371,7 @@ margin/right = 121.0
 margin/bottom = 95.0
 use_top_left = false
 
-[node name="label" type="Label" parent="button_day3/label/number"]
+[node name="label" type="Label" parent="3/label/number"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -387,8 +388,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="button_day4" type="Button" parent="."]
+[node name="4" type="Button" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -406,7 +408,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 
-[node name="label" type="VBoxContainer" parent="button_day4"]
+[node name="label" type="VBoxContainer" parent="4"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -418,7 +420,7 @@ margin/right = 121.0
 margin/bottom = 105.0
 alignment = 0
 
-[node name="day" type="CenterContainer" parent="button_day4/label"]
+[node name="day" type="CenterContainer" parent="4/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -430,7 +432,7 @@ margin/right = 121.0
 margin/bottom = 26.0
 use_top_left = false
 
-[node name="Label" type="Label" parent="button_day4/label/day"]
+[node name="Label" type="Label" parent="4/label/day"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -447,7 +449,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="number" type="CenterContainer" parent="button_day4/label"]
+[node name="number" type="CenterContainer" parent="4/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -459,7 +461,7 @@ margin/right = 121.0
 margin/bottom = 95.0
 use_top_left = false
 
-[node name="label" type="Label" parent="button_day4/label/number"]
+[node name="label" type="Label" parent="4/label/number"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -476,8 +478,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="button_day5" type="Button" parent="."]
+[node name="5" type="Button" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -495,7 +498,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 
-[node name="label" type="VBoxContainer" parent="button_day5"]
+[node name="label" type="VBoxContainer" parent="5"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -507,7 +510,7 @@ margin/right = 121.0
 margin/bottom = 105.0
 alignment = 0
 
-[node name="day" type="CenterContainer" parent="button_day5/label"]
+[node name="day" type="CenterContainer" parent="5/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -519,7 +522,7 @@ margin/right = 121.0
 margin/bottom = 26.0
 use_top_left = false
 
-[node name="Label" type="Label" parent="button_day5/label/day"]
+[node name="Label" type="Label" parent="5/label/day"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -536,7 +539,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="number" type="CenterContainer" parent="button_day5/label"]
+[node name="number" type="CenterContainer" parent="5/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -548,7 +551,7 @@ margin/right = 121.0
 margin/bottom = 95.0
 use_top_left = false
 
-[node name="label" type="Label" parent="button_day5/label/number"]
+[node name="label" type="Label" parent="5/label/number"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -565,8 +568,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="button_day6" type="Button" parent="."]
+[node name="6" type="Button" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -584,7 +588,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 
-[node name="label" type="VBoxContainer" parent="button_day6"]
+[node name="label" type="VBoxContainer" parent="6"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -596,7 +600,7 @@ margin/right = 121.0
 margin/bottom = 105.0
 alignment = 0
 
-[node name="day" type="CenterContainer" parent="button_day6/label"]
+[node name="day" type="CenterContainer" parent="6/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -608,7 +612,7 @@ margin/right = 121.0
 margin/bottom = 26.0
 use_top_left = false
 
-[node name="Label" type="Label" parent="button_day6/label/day"]
+[node name="Label" type="Label" parent="6/label/day"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -625,7 +629,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="number" type="CenterContainer" parent="button_day6/label"]
+[node name="number" type="CenterContainer" parent="6/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -637,7 +641,7 @@ margin/right = 121.0
 margin/bottom = 95.0
 use_top_left = false
 
-[node name="label" type="Label" parent="button_day6/label/number"]
+[node name="label" type="Label" parent="6/label/number"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -654,8 +658,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="button_day7" type="Button" parent="."]
+[node name="7" type="Button" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -673,7 +678,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 
-[node name="label" type="VBoxContainer" parent="button_day7"]
+[node name="label" type="VBoxContainer" parent="7"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -685,7 +690,7 @@ margin/right = 121.0
 margin/bottom = 105.0
 alignment = 0
 
-[node name="day" type="CenterContainer" parent="button_day7/label"]
+[node name="day" type="CenterContainer" parent="7/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -697,7 +702,7 @@ margin/right = 121.0
 margin/bottom = 26.0
 use_top_left = false
 
-[node name="Label" type="Label" parent="button_day7/label/day"]
+[node name="Label" type="Label" parent="7/label/day"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -714,7 +719,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="number" type="CenterContainer" parent="button_day7/label"]
+[node name="number" type="CenterContainer" parent="7/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -726,7 +731,7 @@ margin/right = 121.0
 margin/bottom = 95.0
 use_top_left = false
 
-[node name="label" type="Label" parent="button_day7/label/number"]
+[node name="label" type="Label" parent="7/label/number"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -743,8 +748,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="button_day8" type="Button" parent="."]
+[node name="8" type="Button" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -762,7 +768,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 
-[node name="label" type="VBoxContainer" parent="button_day8"]
+[node name="label" type="VBoxContainer" parent="8"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -774,7 +780,7 @@ margin/right = 121.0
 margin/bottom = 105.0
 alignment = 0
 
-[node name="day" type="CenterContainer" parent="button_day8/label"]
+[node name="day" type="CenterContainer" parent="8/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -786,7 +792,7 @@ margin/right = 121.0
 margin/bottom = 26.0
 use_top_left = false
 
-[node name="Label" type="Label" parent="button_day8/label/day"]
+[node name="Label" type="Label" parent="8/label/day"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -803,7 +809,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="number" type="CenterContainer" parent="button_day8/label"]
+[node name="number" type="CenterContainer" parent="8/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -815,7 +821,7 @@ margin/right = 121.0
 margin/bottom = 95.0
 use_top_left = false
 
-[node name="label" type="Label" parent="button_day8/label/number"]
+[node name="label" type="Label" parent="8/label/number"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -832,8 +838,9 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="button_day9" type="Button" parent="."]
+[node name="9" type="Button" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -851,7 +858,7 @@ shortcut = null
 flat = false
 script/script = ExtResource( 4 )
 
-[node name="label" type="VBoxContainer" parent="button_day9"]
+[node name="label" type="VBoxContainer" parent="9"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -863,7 +870,7 @@ margin/right = 121.0
 margin/bottom = 105.0
 alignment = 0
 
-[node name="day" type="CenterContainer" parent="button_day9/label"]
+[node name="day" type="CenterContainer" parent="9/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -875,7 +882,7 @@ margin/right = 121.0
 margin/bottom = 26.0
 use_top_left = false
 
-[node name="Label" type="Label" parent="button_day9/label/day"]
+[node name="Label" type="Label" parent="9/label/day"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -892,7 +899,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="number" type="CenterContainer" parent="button_day9/label"]
+[node name="number" type="CenterContainer" parent="9/label"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -904,7 +911,7 @@ margin/right = 121.0
 margin/bottom = 95.0
 use_top_left = false
 
-[node name="label" type="Label" parent="button_day9/label/number"]
+[node name="label" type="Label" parent="9/label/number"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -934,52 +941,58 @@ margin/left = 527.0
 margin/top = 678.0
 margin/right = 622.0
 margin/bottom = 775.0
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/normal = SubResource( 9 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 flat = false
 
-[connection signal="button_down" from="button_day1" to="button_day1" method="_on_button_day_button_down"]
+[connection signal="button_down" from="1" to="1" method="_on_button_day_button_down"]
 
-[connection signal="button_up" from="button_day1" to="button_day1" method="_on_button_day_button_up"]
+[connection signal="button_up" from="1" to="1" method="_on_button_day_button_up"]
 
-[connection signal="pressed" from="button_day1" to="button_day1" method="_on_button_day1_pressed"]
+[connection signal="pressed" from="1" to="1" method="_on_button_day1_pressed"]
 
-[connection signal="button_down" from="button_day2" to="button_day2" method="_on_button_day_button_down"]
+[connection signal="button_down" from="2" to="2" method="_on_button_day_button_down"]
 
-[connection signal="button_up" from="button_day2" to="button_day2" method="_on_button_day_button_up"]
+[connection signal="button_up" from="2" to="2" method="_on_button_day_button_up"]
 
-[connection signal="pressed" from="button_day2" to="button_day2" method="_on_button_day2_pressed"]
+[connection signal="pressed" from="2" to="2" method="_on_button_day2_pressed"]
 
-[connection signal="button_down" from="button_day3" to="button_day3" method="_on_button_day_button_down"]
+[connection signal="button_down" from="3" to="3" method="_on_button_day_button_down"]
 
-[connection signal="button_up" from="button_day3" to="button_day3" method="_on_button_day_button_up"]
+[connection signal="button_up" from="3" to="3" method="_on_button_day_button_up"]
 
-[connection signal="button_down" from="button_day4" to="button_day4" method="_on_button_day_button_down"]
+[connection signal="pressed" from="3" to="3" method="_on_button_day3_pressed"]
 
-[connection signal="button_up" from="button_day4" to="button_day4" method="_on_button_day_button_up"]
+[connection signal="button_down" from="4" to="4" method="_on_button_day_button_down"]
 
-[connection signal="button_down" from="button_day5" to="button_day5" method="_on_button_day_button_down"]
+[connection signal="button_up" from="4" to="4" method="_on_button_day_button_up"]
 
-[connection signal="button_up" from="button_day5" to="button_day5" method="_on_button_day_button_up"]
+[connection signal="pressed" from="4" to="4" method="_on_button_day4_pressed"]
 
-[connection signal="button_down" from="button_day6" to="button_day6" method="_on_button_day_button_down"]
+[connection signal="button_down" from="5" to="5" method="_on_button_day_button_down"]
 
-[connection signal="button_up" from="button_day6" to="button_day6" method="_on_button_day_button_up"]
+[connection signal="button_up" from="5" to="5" method="_on_button_day_button_up"]
 
-[connection signal="button_down" from="button_day7" to="button_day7" method="_on_button_day_button_down"]
+[connection signal="pressed" from="5" to="5" method="_on_button_day5_pressed"]
 
-[connection signal="button_up" from="button_day7" to="button_day7" method="_on_button_day_button_up"]
+[connection signal="button_down" from="6" to="6" method="_on_button_day_button_down"]
 
-[connection signal="button_down" from="button_day8" to="button_day8" method="_on_button_day_button_down"]
+[connection signal="button_up" from="6" to="6" method="_on_button_day_button_up"]
 
-[connection signal="button_up" from="button_day8" to="button_day8" method="_on_button_day_button_up"]
+[connection signal="button_down" from="7" to="7" method="_on_button_day_button_down"]
 
-[connection signal="button_down" from="button_day9" to="button_day9" method="_on_button_day_button_down"]
+[connection signal="button_up" from="7" to="7" method="_on_button_day_button_up"]
 
-[connection signal="button_up" from="button_day9" to="button_day9" method="_on_button_day_button_up"]
+[connection signal="button_down" from="8" to="8" method="_on_button_day_button_down"]
+
+[connection signal="button_up" from="8" to="8" method="_on_button_day_button_up"]
+
+[connection signal="button_down" from="9" to="9" method="_on_button_day_button_down"]
+
+[connection signal="button_up" from="9" to="9" method="_on_button_day_button_up"]
 
 

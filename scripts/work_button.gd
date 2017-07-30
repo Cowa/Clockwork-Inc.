@@ -48,3 +48,6 @@ func _on_button_day_button_down():
 
 func _on_button_day_button_up():
 	move_label_on_pressed(false)
+
+func _on_button_relax_pressed():
+	get_tree().change_scene("res://relax.tscn")

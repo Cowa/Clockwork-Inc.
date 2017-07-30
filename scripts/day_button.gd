@@ -2,6 +2,9 @@ extends Button
 
 onready var label = get_node("label")
 
+func _ready():
+	pass
+
 func move_label_on_pressed(pressed):
 	var y_pos = 0
 	if pressed:
@@ -28,6 +31,14 @@ func _on_button_day_button_up():
 func _on_button_day1_pressed():
 	get_tree().change_scene("res://levels/level_1.tscn")
 
-
 func _on_button_day2_pressed():
 	get_tree().change_scene("res://levels/level_2.tscn")
+
+func _on_button_day3_pressed():
+	get_tree().change_scene("res://levels/level_3.tscn")
+
+func _on_button_day4_pressed():
+	get_tree().change_scene("res://levels/level_4.tscn")
+
+func _on_button_day5_pressed():
+	get_tree().change_scene("res://levels/level_5.tscn")

@@ -1,0 +1,366 @@
+[gd_scene load_steps=31 format=1]
+
+[ext_resource path="res://scripts/relax.gd" type="Script" id=1]
+[ext_resource path="res://assets/distributor.png" type="Texture" id=2]
+[ext_resource path="res://assets/green_ball.png" type="Texture" id=3]
+[ext_resource path="res://assets/distributor_pipe.png" type="Texture" id=4]
+[ext_resource path="res://assets/distributor_sphere.png" type="Texture" id=5]
+[ext_resource path="res://scripts/coins_remaining_distributor.gd" type="Script" id=6]
+[ext_resource path="res://assets/coin.png" type="Texture" id=7]
+[ext_resource path="res://assets/fonts/title.fnt" type="BitmapFont" id=8]
+[ext_resource path="res://assets/close_button_unpressed.png" type="Texture" id=9]
+[ext_resource path="res://assets/close_button_pressed.png" type="Texture" id=10]
+[ext_resource path="res://scripts/close_button_distributor.gd" type="Script" id=11]
+[ext_resource path="res://assets/coins_insert_button_unpressed.png" type="Texture" id=12]
+[ext_resource path="res://assets/coins_insert_button_pressed.png" type="Texture" id=13]
+[ext_resource path="res://assets/coin_flat.png" type="Texture" id=14]
+[ext_resource path="res://assets/fonts/small.fnt" type="BitmapFont" id=15]
+[ext_resource path="res://assets/audio/ball_clicked.wav" type="Sample" id=16]
+[ext_resource path="res://assets/audio/ball_opened.wav" type="Sample" id=17]
+[ext_resource path="res://assets/audio/ball_touched_ground.wav" type="Sample" id=18]
+[ext_resource path="res://assets/audio/coins_inserted.wav" type="Sample" id=19]
+[ext_resource path="res://assets/audio/not_enough_coins.wav" type="Sample" id=20]
+[ext_resource path="res://assets/audio/rolling_balls.wav" type="Sample" id=21]
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 9 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=2]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 10 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 9 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=4]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 12 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=5]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 13 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=6]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 12 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="SampleLibrary" id=7]
+
+samples/ball_clicked = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 16 )
+}
+samples/ball_opened = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 17 )
+}
+samples/ball_touched_ground = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 18 )
+}
+samples/coins_inserted = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 19 )
+}
+samples/not_enough_coins = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 20 )
+}
+samples/rolling_balls = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 21 )
+}
+
+[sub_resource type="Animation" id=9]
+
+resource/name = "falling_ball"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("point:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 417.644, 426.834 ), Vector2( 417.644, 689.834 ) ]
+}
+
+[node name="relax" type="Node"]
+
+script/script = ExtResource( 1 )
+
+[node name="distributor" type="Sprite" parent="."]
+
+transform/pos = Vector2( 411.162, 572.053 )
+texture = ExtResource( 2 )
+
+[node name="point" type="Position2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 417, 427 )
+
+[node name="clickable" type="Area2D" parent="point"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Matrix32( 3.79969, 0, 0, 3.33912, -2.07655, 0.189438 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="ball" type="Sprite" parent="point/clickable"]
+
+texture = ExtResource( 3 )
+
+[node name="shape" type="CollisionShape2D" parent="point/clickable"]
+
+transform/pos = Vector2( -2.07655, 0.189438 )
+transform/scale = Vector2( 3.79969, 3.33912 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 0
+
+[node name="pipe" type="Sprite" parent="."]
+
+transform/pos = Vector2( 416.34, 490.142 )
+texture = ExtResource( 4 )
+
+[node name="sphere" type="Sprite" parent="."]
+
+transform/pos = Vector2( 412.006, 227.316 )
+texture = ExtResource( 5 )
+
+[node name="coins_remaining" type="Container" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="coins_remaining"]
+
+transform/pos = Vector2( 47.0441, 51.2498 )
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="coins_remaining"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 96.0
+margin/top = 20.0
+margin/right = 181.0
+margin/bottom = 88.0
+custom_fonts/font = ExtResource( 8 )
+text = "x5"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="close" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 14.0
+margin/top = 691.0
+margin/right = 109.0
+margin/bottom = 788.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+script/script = ExtResource( 11 )
+
+[node name="insert_coins" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 277.0
+margin/top = 487.0
+margin/right = 342.0
+margin/bottom = 551.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+flat = false
+
+[node name="cost" type="Container" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 225.0
+margin/top = 396.0
+margin/right = 328.0
+margin/bottom = 491.0
+
+[node name="Sprite" type="Sprite" parent="cost"]
+
+transform/pos = Vector2( 98.387, 74.5944 )
+transform/scale = Vector2( 0.33279, 0.33279 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="cost"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 58.0
+margin/top = 63.0
+margin/right = 84.0
+margin/bottom = 91.0
+custom_fonts/font = ExtResource( 15 )
+text = "10"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="sounds" type="SamplePlayer2D" parent="."]
+
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 1
+config/samples = SubResource( 7 )
+config/pitch_random = 0.0
+
+[node name="anim_ball_falling" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/falling_ball = SubResource( 9 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[connection signal="pressed" from="close" to="close" method="_on_close_pressed"]
+
+[connection signal="pressed" from="insert_coins" to="." method="_on_insert_coins_pressed"]
+
+
